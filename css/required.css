@@ -1,0 +1,12 @@
+/* Logo
+-------------------------------------------------------*/
+
+.logo {
+  max-height: 40px;
+  position: relative;
+  top: 0px;
+}
+
+.logo--left {
+  justify-content: flex-start;
+}
