@@ -1659,9 +1659,9 @@ textarea#comment {
   height: 180px;
   padding: 8px 16px; }
 
-#contact-form input[type="text"]:focus,
-#contact-form input[type="email"]:focus,
-#contact-form textarea:focus {
+#gform input[type="text"]:focus,
+#gform input[type="email"]:focus,
+#gform textarea:focus {
   border-color: #fff; }
 
 input[type="text"]:focus,
@@ -1684,31 +1684,31 @@ textarea:focus {
   box-shadow: none;
   background-color: transparent; }
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
+#gform input[type="text"],
+#gform input[type="email"],
+#gform textarea {
   color: #fff;
   border-color: transparent; }
 
-#contact-form input::-webkit-input-placeholder,
-#contact-form textarea::-webkit-input-placeholder {
+#gform input::-webkit-input-placeholder,
+#gform textarea::-webkit-input-placeholder {
   color: #fff; }
 
-#contact-form input:-moz-placeholder,
-#contact-form textarea:-moz-placeholder {
+#gform input:-moz-placeholder,
+#gform textarea:-moz-placeholder {
   color: #fff;
   opacity: 1; }
 
-#contact-form input::-moz-placeholder,
-#contact-form textarea::-moz-placeholder {
+#gform input::-moz-placeholder,
+#gform textarea::-moz-placeholder {
   color: #fff;
   opacity: 1; }
 
-#contact-form input:-ms-input-placeholder,
-#contact-form textarea:-ms-input-placeholder {
+#gform input:-ms-input-placeholder,
+#gform textarea:-ms-input-placeholder {
   color: #fff; }
 
-#contact-form .message {
+#gform .message {
   height: 50px;
   width: 100%;
   font-size: 13px;
@@ -1719,10 +1719,10 @@ textarea:focus {
   display: none;
   color: #fff; }
 
-#contact-form .message.error {
+#gform .message.error {
   background-color: #f44336; }
 
-#contact-form .message.success {
+#gform .message.success {
   background-color: #4CAF50; }
 
 /*-------------------------------------------------------*/

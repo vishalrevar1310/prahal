@@ -528,7 +528,7 @@
       url: 'contact.php',
       dataType: 'json',
       cache: false,
-      data: $('#contact-form').serialize(),
+      data: $('#gform').serialize(),
       success: function(data) {
 
         if(data.info !== 'error'){
