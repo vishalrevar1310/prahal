@@ -525,7 +525,7 @@
     
     $.ajax({
       type: "POST",
-      url: 'https://script.google.com/macros/s/AKfycbxX4K1B5iEu4Nc6Ka7UgrXfNqOba8dshgb0kcDWELaTEEX-zm4/exec',
+      url: 'https://script.google.com/macros/s/AKfycbz2pfsStqQqbf1MSGpL10ifMVffp-h1VnbD-mBaSw/exec',
       dataType: "application/x-www-form-urlencoded",
       cache: false,
       data: $('#gform').serialize(),
