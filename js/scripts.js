@@ -521,7 +521,7 @@
   submitContact.on('click', function(e){
     e.preventDefault();
 
-    // var $this = $(this);
+    var $this = $(this);
     
     // $.ajax({
     //   type: "POST",
