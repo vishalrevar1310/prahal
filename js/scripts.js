@@ -544,9 +544,12 @@
     xhr.open('POST', url);
     // xhr.withCredentials = true;
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-      message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+    xhr.onreadystatechange = function () {
+      if(xhr.readyState === 4 && xhr.status === 200) {
+        $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
+      message.hide().removeClass('success').removeClass('error').addClass('success').fadeIn('slow').delay(5000).fadeOut('slow');
       return;
+      }
     };
     // url encode form data for sending as post data
     var encoded = $('#gform').serialize();
