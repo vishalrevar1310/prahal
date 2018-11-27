@@ -515,31 +515,30 @@
   /*  Contact Form
   /* ---------------------------------------------------------------------- */
 
-  // var submitContact = $('#submit-message'),
-  //   message = $('#msg');
+  var submitContact = $('#submit-message'),
+    message = $('#msg');
 
-  // submitContact.on('click', function(e){
-  //   e.preventDefault();
+  submitContact.on('click', function(e){
+    e.preventDefault();
 
-  //   var $this = $(this);
+    var $this = $(this);
     
-  //   $.ajax({
-  //     type: "POST",
-  //     url: 'contact.php',
-  //     dataType: 'json',
-  //     cache: false,
-  //     data: $('#gform').serialize(),
-  //     success: function(data) {
-
-  //       if(data.info !== 'error'){
-  //         $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
-  //         message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-  //       } else {
-  //         message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-  //       }
-  //     }
-  //   });
-  // });
+    $.ajax({
+      type: "POST",
+      url: 'https://script.google.com/macros/s/AKfycbxX4K1B5iEu4Nc6Ka7UgrXfNqOba8dshgb0kcDWELaTEEX-zm4/exec',
+      dataType: 'json',
+      cache: false,
+      data: $('#gform').serialize(),
+      success: function(data) {
+        if(data.info !== 'error'){
+          $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
+          message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+        } else {
+          message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+        }
+      }
+    });
+  });
 
 
   /* Scroll to Top
