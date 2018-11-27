@@ -528,7 +528,7 @@
       url: 'https://script.google.com/macros/s/AKfycbxX4K1B5iEu4Nc6Ka7UgrXfNqOba8dshgb0kcDWELaTEEX-zm4/exec',
       dataType: 'json',
       cache: false,
-      data: $('#gform').serialize(),
+      // data: $('#gform').serialize(),
       success: function(data) {
         if(data.info !== 'error'){
           $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
