@@ -525,7 +525,7 @@
     
     if ($("#name").val() === "" || $("#mail").val() === "" || $("#phone").val() === "") { 
       $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
-      message.hide().removeClass('success').removeClass('error').addClass('success').html("Please fill all the details and try again :)").fadeIn('slow').delay(5000).fadeOut('slow');     
+      message.hide().removeClass('success').removeClass('error').addClass('error').html("Please fill all the details and try again :)").fadeIn('slow').delay(5000).fadeOut('slow');     
     } else {
       var url = 'https://script.google.com/macros/s/AKfycbz2pfsStqQqbf1MSGpL10ifMVffp-h1VnbD-mBaSw/exec';
       var xhr = new XMLHttpRequest();
