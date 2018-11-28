@@ -5507,4 +5507,11 @@ header .flex-child.flex-right {
     .feature-2__holder.titleHolder {
       margin-top: -1%;
   }
+.fa-phone{
+  content: "\f095";
+}
+  
 /*# sourceMappingURL=style.css.map */
+
+.socials .envelope {
+  background-color: #009688; }
