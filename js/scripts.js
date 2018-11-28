@@ -523,6 +523,26 @@
 
     var $this = $(this);
     
+    if ($("#name").val() === "" || $("#mail").val() === "" || $("#phone").val() === "") { 
+      $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
+      message.hide().removeClass('success').removeClass('error').addClass('success').html("Please fill all the details and try again :)").fadeIn('slow').delay(5000).fadeOut('slow');     
+    } else {
+      var url = 'https://script.google.com/macros/s/AKfycbz2pfsStqQqbf1MSGpL10ifMVffp-h1VnbD-mBaSw/exec';
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      // xhr.withCredentials = true;
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function () {
+        if(xhr.readyState === 4 && xhr.status === 200) {
+          $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
+        message.hide().removeClass('success').removeClass('error').html("Thank you for contacting us! We will get back you soon").addClass('success').fadeIn('slow').delay(5000).fadeOut('slow');
+        return;
+        }
+      };
+      // url encode form data for sending as post data
+      var encoded = $('#gform').serialize();
+      xhr.send(encoded);
+    }
     // $.ajax({
     //   type: "POST",
     //   url: 'https://script.google.com/macros/s/AKfycbz2pfsStqQqbf1MSGpL10ifMVffp-h1VnbD-mBaSw/exec',
@@ -538,22 +558,6 @@
     //     }
     //   }
     // });
-
-    var url = 'https://script.google.com/macros/s/AKfycbz2pfsStqQqbf1MSGpL10ifMVffp-h1VnbD-mBaSw/exec';
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', url);
-    // xhr.withCredentials = true;
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function () {
-      if(xhr.readyState === 4 && xhr.status === 200) {
-        $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
-      message.hide().removeClass('success').removeClass('error').addClass('success').fadeIn('slow').delay(5000).fadeOut('slow');
-      return;
-      }
-    };
-    // url encode form data for sending as post data
-    var encoded = $('#gform').serialize();
-    xhr.send(encoded);
   });
 
 
